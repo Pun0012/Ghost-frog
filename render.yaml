@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: phi-kop-game
+    runtime: node
+    plan: free
+    buildCommand: echo "no build"
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: ADMIN_CODE
+        sync: false
